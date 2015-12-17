@@ -10,7 +10,10 @@
 
 <%= render "layouts/partials/header" %>
 <div id="columns">
-  <%= render "layouts/partials/navigation" %>
+  <div id="side">
+    <%= render "layouts/partials/navigation" %>
+    <%= render @cart %>
+  </div>
   <div id="main"><%= yield %></div>
 </div>
 <%= render "layouts/partials/footer" %>
