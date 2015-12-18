@@ -1,3 +1,5 @@
-<%= hidden_div_if(cart_empty?, id: 'cart') do %>
-  <%= render @cart %>
+<% unless has_cart? %>
+  <%= hidden_div_if(cart_empty?, id: 'cart') do %>
+    <%= render @cart %>
+  <% end %>
 <% end %>

@@ -31,7 +31,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        flash.now[:notice] = "Line item #{@line_item.product.title} was successfully created."
+        flash.now[:notice] = "Item #{@line_item.product.title} was successfully added to the cart."
         format.html { redirect_to store_path }
         format.json { render :show, status: :created, location: @line_item }
         format.js { @current_item = @line_item }

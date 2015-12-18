@@ -43,7 +43,7 @@ class CartsController < ApplicationController
   def update
     respond_to do |format|
       if @cart.update(cart_params)
-        flash.now[:notice] = "Cart was successfully updated."
+        flash[:notice] = "Cart was successfully updated."
         format.html { redirect_to @cart }
         format.json { render :show, status: :ok, location: @cart }
         format.js
@@ -61,7 +61,7 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
 
     respond_to do |format|
-      flash.now[:notice] = "Cart is currently empty."
+      flash[:notice] = "Cart is currently empty."
       format.html { redirect_to store_path }
       format.json { head :no_content }
       format.js
