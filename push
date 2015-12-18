@@ -1,0 +1,4 @@
+#!/bin/sh
+git push origin $1 || echo
+git push heroku $1 || echo
+heroku run rake db:migrate || echo
