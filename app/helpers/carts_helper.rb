@@ -1,7 +1,7 @@
 module CartsHelper
 
   def has_cart?
-    @cart.nil?
+    !@cart.nil?
   end
 
   def cart_empty?
