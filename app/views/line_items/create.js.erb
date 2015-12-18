@@ -1,2 +1,5 @@
+if ($('#cart tr').length == 1) $('#cart').show('blind', 500);
+$('#notice').html("<%= notice_html_safe %>").css({'display':'block'});
+setTimeout(function() { $('#notice').fadeOut(500); }, 5000);
 $('#cart').html("<%= j render @cart%>");
-$('#current_item').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
+$('#current_item').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 500);

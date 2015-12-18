@@ -1,5 +1,5 @@
 module CartsHelper
-  def cart_has_any_line_items?
-    @cart.line_items.any?
+  def cart_empty?
+    @cart.empty?
   end
 end

@@ -33,6 +33,9 @@
   margin-bottom: 2em;
   background-color: #f0f0f0;
   font: bold smaller sans-serif;
+  p {
+    margin: 0;
+  }
 }
 
 #columns {
@@ -64,6 +67,7 @@
 
       table {
         width: 100%;
+        border-collapse: collapse;
         border-top: 1px dotted #595;
         border-bottom: 1px dotted #595;
         margin-bottom: 10px;

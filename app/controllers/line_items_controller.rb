@@ -31,7 +31,8 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to store_path, notice: 'Line item was successfully created.' }
+        flash.now[:notice] = "Line item #{@line_item.product.title} was successfully created."
+        format.html { redirect_to store_path }
         format.json { render :show, status: :created, location: @line_item }
         format.js { @current_item = @line_item }
       else
@@ -46,7 +47,7 @@ class LineItemsController < ApplicationController
   def update
     respond_to do |format|
       if @line_item.update(line_item_params)
-        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
+        format.html { redirect_to @line_item, notice: 'Line item  was successfully updated.' }
         format.json { render :show, status: :ok, location: @line_item }
       else
         format.html { render :edit }

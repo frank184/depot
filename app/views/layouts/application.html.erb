@@ -14,7 +14,10 @@
     <%= render "layouts/navigation" %>
     <%= render "layouts/side_cart" %>
   </div>
-  <div id="main"><%= yield %></div>
+  <div id="main">
+    <%= render "layouts/flash" %>
+    <%= yield %>
+  </div>
 </div>
 <%= render "layouts/footer" %>
 
