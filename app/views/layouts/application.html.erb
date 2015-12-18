@@ -8,15 +8,15 @@
 </head>
 <body>
 
-<%= render "layouts/partials/header" %>
+<%= render "layouts/header" %>
 <div id="columns">
   <div id="side">
-    <%= render "layouts/partials/navigation" %>
-    <%= render @cart %>
+    <%= render "layouts/navigation" %>
+    <%= render "layouts/side_cart" %>
   </div>
   <div id="main"><%= yield %></div>
 </div>
-<%= render "layouts/partials/footer" %>
+<%= render "layouts/footer" %>
 
 </body>
 </html>
