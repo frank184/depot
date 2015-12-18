@@ -14,4 +14,9 @@
 //= require jquery-ui/effect-blind
 //= require jquery_ujs
 //= require turbolinks
+//= require app
 //= require_tree .
+
+$(function() {
+  $('#notice').delay(5000).fadeOut(500);
+});
