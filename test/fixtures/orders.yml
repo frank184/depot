@@ -14,6 +14,6 @@ two:
 
 david:
   name: David Thomas
-  address: MyText
-  email: davud@example.org
+  address: 123 Fake St.
+  email: david@example.org
   pay_type: Check

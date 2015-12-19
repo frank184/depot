@@ -28,6 +28,6 @@
     <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: "Select a payment method" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Order", data: { disable_with: "Please wait..." } %>
   </div>
 <% end %>
