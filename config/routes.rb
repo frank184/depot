@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get 'store/index', to: 'store#index', as: :store
 
-  resources :products
+  resources :products do
+    get :who_bought, on: :member
+  end
 
   root 'store#index'
 
