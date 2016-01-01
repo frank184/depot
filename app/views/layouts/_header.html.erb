@@ -1,4 +1,4 @@
 <div id="banner">
-  <%= link_to image_tag("logo.png"), session[:user_id].present? ? "/admin" : "/" %>
+  <%= link_to image_tag("logo.png"), session[:user_id].present? ? admin_path : store_path %>
   <%= @page_title || "Pragmatic Bookshelf" %>
 </div>
