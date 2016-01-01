@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   include CurrentUser
 
-  before_action :set_development_console
+  # before_action :set_development_console
 
   before_action :authorize
 
@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
 
   private
     def set_development_console
-      console
+      console if Rails.env.development?
     end
 end
