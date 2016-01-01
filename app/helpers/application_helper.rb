@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def hidden_div_if(condition, attributes = {}, &block)
+  def hidden_div_if(condition, attributes={}, &block)
     if condition
       attributes["style"] = "display: none"
     end
@@ -9,6 +9,10 @@ module ApplicationHelper
 
   def notice_html_safe
     "<p>#{notice}</p>".html_safe if notice
+  end
+
+  def current_user
+    User.find(session[:user_id])
   end
 
 end
